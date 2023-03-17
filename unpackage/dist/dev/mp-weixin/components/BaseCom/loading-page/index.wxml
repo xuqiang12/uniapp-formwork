@@ -1,0 +1,1 @@
+<view class="main-content data-v-01906a9d"><u-loading-page vue-id="307d6a09-1" loading="{{loading}}" loading-text="加载中...." class="data-v-01906a9d" bind:__l="__l"></u-loading-page><block wx:if="{{!loading}}"><view class="main-content" style="{{$root.s0}}"><slot></slot></view></block></view>

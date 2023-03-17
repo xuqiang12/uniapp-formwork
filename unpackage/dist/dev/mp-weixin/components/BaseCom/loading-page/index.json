@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "u-loading-page": "/uni_modules/uview-ui/components/u-loading-page/u-loading-page"
+  },
+  "component": true
+}

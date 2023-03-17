@@ -1,0 +1,1 @@
+<view><custom-form class="vue-ref" vue-id="6b4b36ba-1" formData="{{formData}}" columns="{{columns}}" data-ref="forms" bind:__l="__l"></custom-form>111</view>

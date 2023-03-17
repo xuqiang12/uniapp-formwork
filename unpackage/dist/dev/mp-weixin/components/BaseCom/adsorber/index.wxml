@@ -1,0 +1,1 @@
+<view style="{{'width:100%;'+('background:'+bgColor+';')}}" class="data-v-2649d58e"><block wx:if="{{preventCaveIn}}"><view style="{{'height:'+($root.g0)+';'}}" class="data-v-2649d58e"></view></block><view class="fixed-sticky data-v-2649d58e" style="{{('height:'+height+'rpx;'+'line-height:'+height+'rpx;'+fixedBottom+fixedTop)}}"><slot></slot></view></view>
