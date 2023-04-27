@@ -7,25 +7,25 @@
 					<u-form-item :required="item.rules.select||item.rules.required" :label="item.label" :prop="item.pram" :customStyle="item.itemStyle" :borderBottom="item.borderBottom!==undefined?item.borderBottom:true" :ref="item.pram">
 						<view class="" v-if="item.type==='picker'" :style="item.valueStyle">
 							<picker mode="selector" :range="item.data" :range-key="item.props&&item.props.label?item.props.label:'label'" @change="itemChange($event,item,tempformData)" :value="exhibitFormData['index'+item.pram]">
-								<view class="flex-between">
-									<input v-model="exhibitFormData['exhibit'+item.pram]" disabled disabledColor="#ffffff" :placeholder="'请选择'+item.label" border="none" :placeholder-style="item.placeholderStyle" placeholder-class="placeholder-class" :style="item.valueStyle?item.valueStyle:item.placeholderStyle" style="width: 100%;"></input>
+								<view class="flex-level-between">
+									<input v-model="exhibitFormData['exhibit'+item.pram]" disabled disabledColor="#ffffff" :placeholder="'请选择'+item.label" border="none" :placeholder-style="item.placeholderStyle" placeholder-class="placeholder-class" :style="item.valueStyle?item.valueStyle:item.placeholderStyle" style="width: 100%;" />
 									<u-icon slot="right" name="arrow-right"></u-icon>
 								</view>
 							</picker>
 						</view>
 						<!-- 日历 -->
-						<view class="flex-between" v-else-if="item.type==='date'" :style="item.valueStyle" @click="showCalendar = true">
-							<input v-model="tempformData[item.pram]" :placeholder="'请选择'+item.label" :placeholder-style="placeholderStyle" :style="item.valueStyle?item.valueStyle:item.placeholderStyle" placeholder-class="placeholder-class" disabled disabledColor="#ffffff" style="width: 100%;" border="none"></input>
+						<view class="flex-level-between" v-else-if="item.type==='date'" :style="item.valueStyle" @click="showCalendar = true">
+							<input v-model="tempformData[item.pram]" :placeholder="'请选择'+item.label" :placeholder-style="placeholderStyle" :style="item.valueStyle?item.valueStyle:item.placeholderStyle" placeholder-class="placeholder-class" disabled disabledColor="#ffffff" style="width: 100%;" border="none" />
 							<u-icon slot="right" name="arrow-right"></u-icon>
 							<u-calendar :show="showCalendar" @confirm="calendarConfirm($event,item.pram)" @close="showCalendar=false"></u-calendar>
 						</view>
 						<!-- uni原生 级联选择器 -->
-						<view class="flex-between" v-else-if="item.type==='cascader'" :style="item.valueStyle">
+						<view class="flex-level-between" v-else-if="item.type==='cascader'" :style="item.valueStyle">
 							<uni-data-picker :value="tempformData[item.pram]" class="cascader" :border="false" :placeholder="'请选择'+item.label" :popup-title="'请选择'+item.label" :localdata="item.data" @change="itemChange($event,item,tempformData)" :map="item.props?item.props:cascadeProps" style="width: 100%;"></uni-data-picker>
 							<u-icon slot="right" name="arrow-right"></u-icon>
 						</view>
 						<!-- 自定义 级联选择器  很垃圾 很多bug  能不用就不用-->
-					<!-- 	<view class="flex-between" v-else-if="item.type==='tertiaryCascader'" :style="item.valueStyle" @click="getPickerData(tempformData[item.pram],item.pram)">
+					<!-- 	<view class="flex-level-between" v-else-if="item.type==='tertiaryCascader'" :style="item.valueStyle" @click="getPickerData(tempformData[item.pram],item.pram)">
 							<u--input v-model="pickerlabel" disabled disabledColor="#ffffff" :placeholder="'请选择'+item.label" border="none"></u--input>
 							<u-icon slot="right" name="arrow-right"></u-icon>
 							<x-uni-picker :ref="item.pram+'level'" :pickerValueDefault="pickerValueDefault" v-if="columns[i].data.length>0" :treeData="columns[i].data" @onConfirm="tertiaryConfirm($event,columns[i].pram)" themeColor='#007AFF'></x-uni-picker>
@@ -40,10 +40,10 @@
 							<!-- 小程序 -->
 							<slot v-if="$slots[`content-${item['pram']}`]" name="content-{{item.$orig['pram']}}" />
 							<!-- uview的u--input赋值后dom不更新，使用原input -->
-							<input v-else-if="!$slots[`content-${item['pram']}`]&&item.type==='number'" type="number" :placeholder-style="placeholderStyle" v-model="tempformData[item.pram]" @input="itemChange(item.pram,tempformData)" border="none" :placeholder="'请输入'+item.label"></input>
-							<input v-else-if="!$slots[`content-${item['pram']}`]&&item.type==='idcard'" type="idcard" :placeholder-style="placeholderStyle" v-model="tempformData[item.pram]" @input="itemChange(item.pram,tempformData)" border="none" :placeholder="'请输入'+item.label"></input>
-							<input v-else-if="!$slots[`content-${item['pram']}`]&&item.type==='digit'" type="digit" :placeholder-style="placeholderStyle" v-model="tempformData[item.pram]" @input="itemChange(item.pram,tempformData)" border="none" :placeholder="'请输入'+item.label"></input>
-							<input v-else type="text" :placeholder-style="placeholderStyle" v-model="tempformData[item.pram]" @input="itemChange(item.pram,tempformData)" border="none" :placeholder="'请输入'+item.label"></input>
+							<input v-else-if="!$slots[`content-${item['pram']}`]&&item.type==='number'" type="number" :placeholder-style="placeholderStyle" v-model="tempformData[item.pram]" @input="itemChange(item.pram,tempformData)" border="none" :placeholder="'请输入'+item.label" />
+							<input v-else-if="!$slots[`content-${item['pram']}`]&&item.type==='idcard'" type="idcard" :placeholder-style="placeholderStyle" v-model="tempformData[item.pram]" @input="itemChange(item.pram,tempformData)" border="none" :placeholder="'请输入'+item.label" />
+							<input v-else-if="!$slots[`content-${item['pram']}`]&&item.type==='digit'" type="digit" :placeholder-style="placeholderStyle" v-model="tempformData[item.pram]" @input="itemChange(item.pram,tempformData)" border="none" :placeholder="'请输入'+item.label" />
+							<input v-else type="text" :placeholder-style="placeholderStyle" v-model="tempformData[item.pram]" @input="itemChange(item.pram,tempformData)" border="none" :placeholder="'请输入'+item.label" />
 							<!-- #endif -->
 							<!-- #ifndef MP -->
 							<!-- 非小程序 -->
@@ -57,10 +57,10 @@
 				<!-- 详情展示 -->
 				<template v-else-if="item.effect&&item.effect == 'exhibit'?true:false">
 					<!-- 插槽item -->
-					<view class="exhibit-item flex-between" v-if="$slots[`item-${item['pram']}`]">
+					<view class="exhibit-item flex-level-between" v-if="$slots[`item-${item['pram']}`]">
 						<slot name="item-{{item.$orig['pram']}}" />
 					</view>
-					<view v-else :style="item.itemStyle" class="exhibit-item flex-between">
+					<view v-else :style="item.itemStyle" class="exhibit-item flex-level-between">
 						<view class="formlabel" v-if="item.label" :style="item.labelStyle?'width:'+labelWidth+'rpx;min-width:'+labelWidth+'rpx;'+item.labelStyle:'width:'+labelWidth+'rpx;min-width:'+labelWidth+'rpx'">
 							<slot v-if="$slots[`title-${item['pram']}`]" name="title-{{item.$orig['pram']}}" />
 							<text v-else>{{ item.label }}:</text>
@@ -308,7 +308,7 @@
 		font-size: 14px;
 	}
 
-	// .flex-between {
+	// .flex-level-between {
 	// 	width: 100%;
 	// 	// border-bottom: 2rpx solid #f3f6fd;
 	// 	display: flex;
@@ -316,7 +316,7 @@
 	// 	align-items: flex-start;
 	// }
 
-	.flex-between {
+	.flex-level-between {
 		width: 100%;
 		display: flex;
 		flex-direction: row;

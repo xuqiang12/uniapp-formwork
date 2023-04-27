@@ -22,7 +22,7 @@
 							<item-content :itemColumns='itemRow' :contentData="sonItemData" class="item-value"></item-content>
 						</slot>
 					</view>
-					<view class="flex-start" v-if="i===1">
+					<view class="flex-level-left" v-if="i===1">
 						<slot name="label2">
 							<text v-if="itemRow.label" class="item-label" :style="itemRow.labelStyle">{{itemRow.label}}:</text>
 						</slot>
@@ -30,7 +30,7 @@
 							<item-content :itemColumns='itemRow' :contentData="sonItemData" class="item-value"></item-content>
 						</slot>
 					</view>
-					<view class="flex-start" v-if="i===2">
+					<view class="flex-level-left" v-if="i===2">
 						<slot name="label3">
 							<text v-if="itemRow.label" class="item-label" :style="itemRow.labelStyle">{{itemRow.label}}:</text>
 						</slot>
@@ -38,7 +38,7 @@
 							<item-content :itemColumns='itemRow' :contentData="sonItemData" class="item-value"></item-content>
 						</slot>
 					</view>
-					<view class="flex-start" v-if="i===3">
+					<view class="flex-level-left" v-if="i===3">
 						<slot name="label4">
 							<text v-if="itemRow.label" class="item-label" :style="itemRow.labelStyle">{{itemRow.label}}:</text>
 						</slot>
@@ -46,7 +46,7 @@
 							<item-content :itemColumns='itemRow' :contentData="sonItemData" class="item-value"></item-content>
 						</slot>
 					</view>
-					<view class="flex-start" v-if="i===4">
+					<view class="flex-level-left" v-if="i===4">
 						<slot name="label5">
 							<text v-if="itemRow.label" class="item-label" :style="itemRow.labelStyle">{{itemRow.label}}:</text>
 						</slot>
@@ -133,8 +133,8 @@
 				return !this.thumbSize ? 'single-line-thumb' : this.thumbSize === 'mini' ? 'mini-thumb' : this.thumbSize === 'small' ? 'small-thumb' : this.thumbSize === 'medium' ? 'medium-thumb' : 'plus-thumb'
 			},
 			item_layout() { //list-item排版样式类名
-				// return this.operatIcon || this.operatBtn || this.operatCustomIcon ? 'flex-between' : 'flex-start'
-				return this.operate.pram ? 'flex-between' : 'flex-start'
+				// return this.operatIcon || this.operatBtn || this.operatCustomIcon ? 'flex-between' : 'flex-level-left'
+				return this.operate.pram ? 'flex-between' : 'flex-level-left'
 			},
 			item_content_layout() { //中部内容的样式
 				return !(this.operate.pram) && !(this.thumbnail.pram) ? 'content-item-width1' : !(this.thumbnail.pram) ? 'content-item-width2' : !(this.operate.pram) ? 'content-item-width3' : ''
@@ -149,7 +149,7 @@
 		},
 		data() {
 			return {
-				
+
 			}
 		},
 		mounted() {},
@@ -199,11 +199,11 @@
 		align-items: center;
 	}
 
-	.flex-start {
+	.flex-level-left {
 		//从左到右排列
 		display: flex;
 		flex-direction: row;
-		justify-content: flex-start;
+		justify-content: flex-level-left;
 		align-items: center;
 	}
 

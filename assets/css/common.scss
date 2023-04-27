@@ -1,78 +1,77 @@
-.container{
-	width: 100%;
-	height: 100vh;
+.container {
+  width: 100%;
+  height: 100vh;
 }
-page{
-	 font-family: 思源黑体;
+page {
+  font-family: 思源黑体;
 }
 /* 弹性盒子 */
 // 水平排版
-.flex-level-left{
-	width: 100%;
-	display: flex;
-	flex-direction: row; //从左往右排
-	justify-content: flex-start; //左对齐
-	align-items: center; //垂直居中
-	flex-wrap: nowrap //不换行
+.flex-level-left {
+  width: 100%;
+  display: flex;
+  flex-direction: row; //从左往右排
+  justify-content: flex-start; //左对齐
+  align-items: center; //垂直居中
+  flex-wrap: nowrap; //不换行
 }
-.flex-level-right{
-	width: 100%;
-	display: flex;
-	flex-direction: row; //从左往右排
-	justify-content: flex-end; //右对齐
-	align-items: center; //垂直居中
-	flex-wrap: nowrap //不换行
+.flex-level-right {
+  width: 100%;
+  display: flex;
+  flex-direction: row; //从左往右排
+  justify-content: flex-end; //右对齐
+  align-items: center; //垂直居中
+  flex-wrap: nowrap; //不换行
 }
 
-.flex-level-center{
-	width: 100%;
-	display: flex;
-	flex-direction: row; //从左往右排
-	justify-content: center; //水平居中对齐
-	align-items: center; //垂直居中
-	flex-wrap: nowrap //不换行
+.flex-level-center {
+  width: 100%;
+  display: flex;
+  flex-direction: row; //从左往右排
+  justify-content: center; //水平居中对齐
+  align-items: center; //垂直居中
+  flex-wrap: nowrap; //不换行
 }
-.flex-level-between{
-	width: 100%;
-	display: flex;
-	flex-direction: row; //从左往右排
-	justify-content: space-between; //水平居中对齐
-	align-items: center; //垂直居中
-	flex-wrap: nowrap //不换行
+.flex-level-between {
+  width: 100%;
+  display: flex;
+  flex-direction: row; //从左往右排
+  justify-content: space-between; //水平居中对齐
+  align-items: center; //垂直居中
+  flex-wrap: nowrap; //不换行
 }
 // 垂直排版
-.flex-erect-top{
-	width: 100%;
-	display: flex;
-    flex-direction: column;//从上往下排
-    flex-wrap: nowrap;//不换行
-    align-items: flex-start; //左对齐
-    justify-content: flex-start;//居上对其
+.flex-erect-top {
+  width: 100%;
+  display: flex;
+  flex-direction: column; //从上往下排
+  flex-wrap: nowrap; //不换行
+  align-items: flex-start; //左对齐
+  justify-content: flex-start; //居上对其
 }
-.flex-erect-bottom{
-	width: 100%;
-	display: flex;
-    flex-direction: column;//从上往下排
-    flex-wrap: nowrap;//不换行
-    align-items: flex-start; //左对齐
-    justify-content: flex-end;//居下对其
-}
-
-.flex-erect-center{
-	width: 100%;
-	display: flex;
-	flex-direction: column;//从上往下排
-	flex-wrap: nowrap;//不换行
-	align-items: flex-start; //左对齐
-	justify-content: center;//垂直居中对其
+.flex-erect-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column; //从上往下排
+  flex-wrap: nowrap; //不换行
+  align-items: flex-start; //左对齐
+  justify-content: flex-end; //居下对其
 }
 
-.flex-erect-between{
-	width: 100%;
-	display: flex;
-	flex-direction: column;//从上往下排
-	flex-wrap: nowrap;//不换行
-	align-items: flex-start; //左对齐
-	justify-content: space-between;//居上下两端对其
+.flex-erect-center {
+  width: 100%;
+  display: flex;
+  flex-direction: column; //从上往下排
+  flex-wrap: nowrap; //不换行
+  align-items: flex-start; //左对齐
+  justify-content: center; //垂直居中对其
 }
 
+.flex-erect-between {
+  width: 100%;
+  display: flex;
+  flex-direction: column; //从上往下排
+  flex-wrap: nowrap; //不换行
+  align-items: flex-start; //左对齐
+  justify-content: space-between; //居上下两端对其
+}

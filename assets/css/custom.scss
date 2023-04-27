@@ -1,4 +1,4 @@
-	
+
 	/* 搜索框 */
 	.search-box {
 		width: 100%;
@@ -45,62 +45,18 @@
 	/* #endif */
 
 }
-/* 弹性盒子 */
-.flex-between {
-	width: 100%;
-	display: flex;
-    flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.flex-right {
-	width: 100%;
-	display: flex;
-  flex-direction: row;
-  align-items: center;
-	justify-content: flex-end;
-}
-.flex-left {
-	width: 100%;
-	display: flex;
-  flex-direction: row;
-  align-items: center;
-	justify-content: break-word;
-}
-.flex-start {
-	width: 100%;
-	display: flex;
-  flex-direction: row;
-  align-items: center;
-	justify-content: flex-start;
-}
-.flex-around {
-	width: 100%;
-	display: flex;
-  flex-direction: row;
-  align-items: center;
-	justify-content: space-around;
-}
-.flex-center {
-	width: 100%;
-	display: flex;
-  flex-direction: row;
-  align-items: center;
-	justify-content: center;
-}
 
 // 自定义样式
 
 button[type=primary] {
 	/* #ifdef MP-WEIXIN  */
     color: #fff;
-    background-color: #48A3FF;	
+    background-color: #48A3FF;
 	/* #endif */
 }
 .button-hover[type=primary] {
     color: #fff;
-    background-color: #48A3FF;	
+    background-color: #48A3FF;
 }
 
 uni-page-body{
