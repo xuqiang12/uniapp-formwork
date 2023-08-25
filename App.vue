@@ -1,19 +1,28 @@
 <script>
 	export default {
-		globalData:{
-			name:true
+		globalData: {
+			name: true
 		},
 		onLoad() {
 			// console.log('App onLoad')
 		},
-		onLaunch: function() {
+		// onLaunch: function() {
 
-			// uni.loadFontFace({
-			// 	family: '思源黑体',
-			// 	global: true,
-			// 	source: 'url("https://vkceyugu.cdn.bspapp.com/VKCEYUGU-4ad7ad0d-671d-4e62-b708-7519aabab27d/5398630f-8b48-4e8f-bbf0-b605aa23de86.ttf")',
-			// })
-			// console.log('App Launch11111111111111')
+		// 	// uni.loadFontFace({
+		// 	// 	family: '思源黑体',
+		// 	// 	global: true,
+		// 	// 	source: 'url("https://vkceyugu.cdn.bspapp.com/VKCEYUGU-4ad7ad0d-671d-4e62-b708-7519aabab27d/5398630f-8b48-4e8f-bbf0-b605aa23de86.ttf")',
+		// 	// })
+		// 	console.log('App Launch11111111111111')
+		// },
+
+		onLaunch: function() {
+			// console.log(this.isCode(), 11111111111)
+			// if (this.isCode()) {
+			// 	this.getUserInfo()
+			// } else {
+			// 	this.getCode()
+			// }
 		},
 		onShow: function() {
 			// console.log('App Show')
@@ -31,5 +40,4 @@
 </style>
 <style>
 	/*每个页面公共css */
-
 </style>

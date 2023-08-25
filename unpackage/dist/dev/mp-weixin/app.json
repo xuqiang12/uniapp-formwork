@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/launchpage/index",
     "pages/login/index",
+    "pages/launchpage/index",
     "pages/launchpage/my",
     "pages/launchpage/message"
   ],

@@ -1,6 +1,6 @@
 {
-  "navigationBarTitleText": "登录",
+  "navigationStyle": "custom",
   "usingComponents": {
-    "custom-form": "/components/BaseCom/custom-form/index"
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button"
   }
 }
